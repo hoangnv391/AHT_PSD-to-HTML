@@ -1,6 +1,6 @@
 $primary-color: #ffc587;
 $text-color: #16275b;
-$text-gray: #c6cad7;
+$text-gray: #9d9ea2;
 
 html {
     font-size: 62.5%; // 1rem = 10px;
@@ -68,6 +68,7 @@ body {
         }
         &-link {
             font-size: 1.6rem;
+            font-weight: 400;
             color: $text-color;
             transition: color .25s linear, border 0.25s linear;
             &:hover {
@@ -159,16 +160,16 @@ body {
         border-radius: 20px;
         @include flex(stretch,flex-start ,nowrap,column);
         &:first-child {
-            box-shadow: 0 20px 35px -5px rgba(255, 151, 195, 0.25);
+            box-shadow: 0 29px 35px -5px rgba(#fe97c2, 0.4);
         }
         &:nth-child(2){
-            box-shadow: 0 20px 35px -5px rgba(255, 151, 195, 0.25);
+            box-shadow: 0 29px 35px -5px rgba(#ff706c, 0.4);
         }
         &:nth-last-child(2){
-            box-shadow: 0 20px 35px -5px rgba(255, 151, 195, 0.25);
+            box-shadow: 0 29px 35px -5px rgba(#8598ff, 0.4);
         }
         &:last-child{
-            box-shadow: 0 20px 35px -5px rgba(255, 151, 195, 0.25);
+            box-shadow: 0 29px 35px -5px rgba(#ffc87b, 0.4);
         }
     }
     &__image {
@@ -239,8 +240,15 @@ body {
             font-weight: 600;
             font-size: 1.8rem;
             margin-bottom: 3rem;
-            text-decoration: underline;
+            //text-decoration: underline;
             color: $text-color;
+
+            span {
+                padding-bottom: 4px;
+                border-bottom: 2px solid $text-color;
+                line-height: 30px;
+              }
+
             &--circle {
                 text-decoration: none;
                 position: relative;
@@ -345,8 +353,8 @@ body {
         max-width: 83rem;
         text-align: center;
     }
-    &__title {
-        font-size: 2rem;
+    &__title { 
+        font-size: 3rem;
         font-weight: bold;
         padding-bottom: 7rem;
         margin-bottom: 6rem;
@@ -430,7 +438,7 @@ body {
     }
     &__social i {
         margin-left: 4rem;
-        font-size: 2rem;
+        font-size: 3rem;
     }
 }
 
@@ -548,6 +556,9 @@ body {
                 margin: 0 auto;
             }
         }
+        &__title {
+            font-size: 2rem;
+        }
     }
     .connect {
         margin-bottom: 5rem;
@@ -594,6 +605,7 @@ body {
         }
         &__social{
             @include flex(center, space-between);
+            font-size: 2rem;
             i {
                 padding: 0 1rem;
                 margin: 0;
